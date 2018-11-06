@@ -1,0 +1,42 @@
+.main_header_wrapper{padding: 50px 50px;
+    background: #1B5E20;
+}
+
+body{
+    background:#f1f1f1;
+}
+.main_section{
+    position: relative;
+    margin-top: -5%;
+    background: #fff;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    padding: 50px 0px;
+}
+.admin_section{
+    position: relative;
+    margin-top: -5%;
+    background: #fff;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    padding: 50px 0px;
+}
+#form_heading{
+    font-size: 25px;
+}
+.padd-top-30{
+    padding-top:30px;
+}
+.mar-reset{
+    margin: 0 !important;
+}
+.form_meta{
+    padding: 0 100px;
+}
+.member-head{
+    color: #1F5891;
+    font-size: 25px;
+    font-weight: 500;
+}
+.member-meta-sub-heading{
+        color: #2E7D32;
+}
+
