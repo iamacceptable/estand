@@ -159,10 +159,9 @@
                                         
 
                                     </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <li class="list-group-item justify-content-between align-items-center">
                                         <a class="dark-grey-text font-small">
-                                            <i class="fa fa-mobile-phone dark-grey-text mr-3" aria-hidden="true"></i> Smartphone</a>
-                                        <span class="badge badge-danger badge-pill">32</span>
+                                            <i class="fa fa-question dark-grey-text mr-3" aria-hidden="true"></i> <b>Why to use E-Stand:</b>Best international ergonomics principle have been embedded in eStand....<a href="#">Read More</a></a>
                                     </li>
                                     <li class="list-group-item d-flex justify-content-between align-items-center">
                                         <a class="dark-grey-text font-small">

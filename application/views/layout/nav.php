@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link waves-effect waves-light dark-grey-text font-weight-bold" href="#">
+                    <a class="nav-link waves-effect active waves-light dark-grey-text font-weight-bold" href="#">
                         <i class="fa fa-home red-text"></i> Home
                         <!-- <span class="sr-only">(current)</span> -->
                     </a>
