@@ -14,12 +14,10 @@
                 <li data-target="#carousel-golu" data-slide-to="3"></li>
             </ol>
             <div class="carousel-inner" role="listbox">
-                <!--First slide-->
                 <div class="carousel-item active">
                     <div class="view zoom h-100">
                         <img class="d-block h-100 w-lg-100" src="https://mdbootstrap.com/img/Photos/Others/ecommerce4.jpg" alt="First slide">
                         <div class="mask waves-effect waves-light rgba-black-slight">
-                            <!-- Caption -->
                             <div class="full-bg-img flex-center white-text">
                                 <ul class="animated fadeIn col-10 list-unstyled">
                                     <li>
@@ -35,17 +33,13 @@
                                     </li>
                                 </ul>
                             </div>
-                            <!-- /.Caption -->
                         </div>
                     </div>
                 </div>
-                <!--/First slide-->
-                <!--Second slide-->
                 <div class="carousel-item h-100">
                     <div class="view zoom h-100">
                         <img class="d-block h-100 w-lg-100 avtar" src="<?php echo base_url(); ?>assets/images/homepagecou/product1.jpg" alt="Second slide">
                         <div class="mask waves-effect waves-light rgba-white-slight">
-                            <!-- Caption -->
                             <div class="full-bg-img flex-center white-text">
                                 <ul class="animated fadeIn col-10 list-unstyled">
                                     <li>
@@ -61,17 +55,13 @@
                                     </li>
                                 </ul>
                             </div>
-                            <!-- /.Caption -->
                         </div>
                     </div>
                 </div>
-                <!--/Second slide-->
-                <!--Third slide-->
                 <div class="carousel-item">
                     <div class="view h-100">
                         <img class="d-block h-100 w-lg-100" src="https://mdbootstrap.com/img/Photos/Others/ecommerce3.jpg" alt="Third slide">
                         <div class="mask">
-                            <!-- Caption -->
                             <div class="full-bg-img flex-center white-text">
                                 <ul class="animated fadeIn col-md-10 text-center text-md-right list-unstyled">
                                     <li>
@@ -84,17 +74,13 @@
                                     </li>
                                 </ul>
                             </div>
-                            <!-- /.Caption -->
                         </div>
                     </div>
                 </div>
-                <!--/Third slide-->
-                <!--Third slide-->
                 <div class="carousel-item">
                     <div class="view h-100">
                         <img class="d-block h-100 w-lg-100" src="https://mdbootstrap.com/img/Photos/Others/ecommerce3.jpg" alt="Third slide">
                         <div class="mask">
-                            <!-- Caption -->
                             <div class="full-bg-img flex-center white-text">
                                 <ul class="animated fadeIn col-md-10 text-center text-md-right list-unstyled">
                                     <li>
@@ -107,13 +93,10 @@
                                     </li>
                                 </ul>
                             </div>
-                            <!-- /.Caption -->
                         </div>
                     </div>
                 </div>
-                <!--/Third slide-->
             </div>
-            <!--/.Slides-->
             <!--Controls-->
             <!-- <a class="carousel-control-prev" href="#carousel-golu" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -125,29 +108,18 @@
             </a> -->
             <!--/.Controls-->
         </div>
-        <!--/.Carousel Wrapper-->
-
     </section>
-    <!--/Intro-->
-
-    <!-- Main Container -->
     <div class="container">
-        <!-- Grid row -->
         <div class="row pt-4">
 
-            <!-- Content -->
             <div class="col-lg-12">
 
-                <!-- Categories & Adv -->
                 <section class="section pt-2">
 
-                    <!-- Grid row -->
                     <div class="row">
 
-                        <!--Grid column-->
                         <div class="col-lg-4 col-md-12 mb-4">
 
-                            <!-- Section: Categories -->
                             <section class="section">
 
                                 <ul class="list-group z-depth-1">
@@ -175,35 +147,21 @@
                                     </li>
                                 </ul>
                             </section>
-                            <!-- Section: Categories -->
-
+                            
                         </div>
-                        <!--Grid column-->
-
-                        <!--Grid column-->
                         <div class="col-lg-8 col-md-12 pb-lg-5 mb-4">
                             <div class="embed-responsive embed-responsive-16by9">
   								<iframe class="embed-responsive-item" src="http://www.youtube.com/embed/foln8_jgmqw" allowfullscreen></iframe>
 							</div>
                         </div>
-                        <!--Grid column-->
-
+                       
                     </div>
-                    <!--Grid row-->
-
+                   
                 </section>
-                <!-- Categories & Adv -->
-                <!--Section: Advertising-->
                 <section>
-
-                    <!--Grid row-->
-                    <div class="row">
-
-                        <!--Grid column-->
+                     <div class="row">
                         <div class="col-12">
-                            <!--Image -->
                             <div class="view  z-depth-1">
-
                                 <img src="https://mdbootstrap.com/img/Photos/Others/ecommerce5.jpg" class="img-fluid" alt="SALE image">
                                 <div class="mask rgba-stylish-slight">
                                     <div class="dark-grey-text text-right pt-lg-5 pt-md-1 mr-5 pr-md-4 pr-0">
@@ -220,22 +178,12 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
-                            <!--Image -->
                         </div>
-                        <!--Grid column-->
-
                     </div>
-                    <!--Grid row-->
-
                 </section>
-                <!--/Section: Advertising-->
-
-                <!--Section: product list-->
                 <section class="mb-5">
                     <div class="row">
-                        <!-- New Products-->
                         <div class="col-lg-12 col-md-12 col-12 pt-5">
                          
                          <hr>
@@ -247,7 +195,6 @@
                         </div>
                         <div class="col-lg-4 col-md-12 col-12">
                             
-                            <!-- First row -->
                             <div class="row mt-5 py-2 mb-4 hoverable align-items-center">
 
                                 <div class="col-6">
@@ -257,12 +204,9 @@
                                 </div>
                                 <div class="col-6">
 
-                                    <!-- Title -->
                                     <a class="pt-5">
                                         <strong>iPad</strong>
                                     </a>
-
-                                    <!-- Rating -->
                                     <ul class="rating inline-ul">
                                         <li>
                                             <i class="fa fa-star blue-text"></i>
@@ -280,8 +224,6 @@
                                             <i class="fa fa-star grey-text"></i>
                                         </li>
                                     </ul>
-
-                                    <!-- Price -->
                                     <h6 class="h6-responsive font-weight-bold dark-grey-text">
                                         <strong>₹849</strong>
                                     </h6>
@@ -289,9 +231,6 @@
                                 </div>
 
                             </div>
-                            <!-- /.First row -->
-
-                            <!-- Second row -->
                             <div class="row mt-2 py-2 mb-4 hoverable align-items-center">
 
                                 <div class="col-6">
@@ -301,12 +240,10 @@
                                 </div>
                                 <div class="col-6">
 
-                                    <!-- Title -->
                                     <a>
                                         <strong>Headphones</strong>
                                     </a>
 
-                                    <!-- Rating -->
                                     <ul class="rating inline-ul">
                                         <li>
                                             <i class="fa fa-star blue-text"></i>
