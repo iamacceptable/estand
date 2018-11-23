@@ -1,7 +1,7 @@
 <nav class="navbar fixed-top navbar-expand-lg  navbar-light scrolling-navbar white">
     <div class="container">
         <a class="navbar-brand font-weight-bold" href="#">
-            <strong class="red-text">E-Stand</strong>
+            <strong class="red-text">Elpedia Welfare Technology</strong>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -16,24 +16,32 @@
                     </a>
                 </li>
                 <li class="nav-item ml-3">
-                    <a class="nav-link waves-effect waves-light dark-grey-text font-weight-bold" href="#">
+                    <a class="nav-link waves-effect waves-light dark-grey-text font-weight-bold" href="<?php echo base_url();?>index.php/Navbar/products">
                         <i class="fa fa-product-hunt red-text"></i> Products</a>
                 </li>
                 <li class="nav-item ml-3">
                     <a class="nav-link waves-effect waves-light dark-grey-text font-weight-bold" href="#">
                         <i class="fa fa-info red-text"></i> About Us</a>
                 </li>
+                <?php if(isset($_SESSION['loginned'])){ ?>
                 <li class="nav-item dropdown ml-3">
                     <a class="nav-link dropdown-toggle waves-effect waves-light dark-grey-text font-weight-bold" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
                         <i class="fa fa-user red-text"></i> Profile </a>
                     <div class="dropdown-menu dropdown-menu-left dropdown-blue" aria-labelledby="navbarDropdownMenuLink-4">
                         <a class="dropdown-item waves-effect waves-light" href="#"><i class="fa fa-cart-plus red-text"></i> My Cart <span class="badge badge-success">0</span></a>
-                        <a class="dropdown-item waves-effect waves-light" href="#"><i class="fa fa-user-o red-text"></i> My Account</a>
+                        <a class="dropdown-item waves-effect waves-light" href="#"><i class="fa fa-user-o red-text"></i> <?= $_SESSION['name'];?></a>
                         <a class="dropdown-item waves-effect waves-light" href="#"><i class="fa fa-sign-out red-text"></i> Log out</a>
                     </div>
                 </li>
+                <?php } else{ ?>
+                <li class="nav-item ml-3">
+                    <a class="nav-link waves-effect waves-light dark-grey-text font-weight-bold" href="<?php echo base_url();?>index.php/Navbar/auth">
+                        <i class="fa fa-sign-in red-text"></i> Login/Register</a>
+                </li>
+                <?php }?>
             </ul>
         </div>
     </div>
+    
 </nav>

@@ -6,16 +6,19 @@
         new WOW().init();
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
-        })
+        });
+        
     </script>
-
+    <script>
+        $(document).ready(function() {
+            $('.datepicker').pickadate();
+        });
+    </script>
+<!-- 
     <script>
         $(document).ready(function () {
             $('.mdb-select').material_select();
         });
-    </script>
-    <script>
-        $(".button-collapse").sideNav();
-    </script>
+    </script> -->
 </body>
 </html>
