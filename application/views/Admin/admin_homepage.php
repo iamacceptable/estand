@@ -7,10 +7,10 @@
 
     <!-- Nav tabs -->
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-3 col-lg-3 col-sm-3">
         <ul class="nav md-pills pills-danger flex-column" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#panel21" role="tab">
+            <a class="nav-link active" data-toggle="tab" href="#homepage" role="tab">
               <i class="fa fa-home mr-2"></i>Homepage
             </a>
           </li>
@@ -26,11 +26,11 @@
           </li>
         </ul>
       </div>
-      <div class="col-md-9">
+      <div class="col-md-9 col-sm-9 col-lg-9 ">
         <!-- Tab panels -->
         <div class="tab-content vertical">
           <!-- Panel 1 -->
-          <div class="tab-pane fade in show active" id="panel21" role="tabpanel">
+          <div class="tab-pane fade in show active" id="homepage" role="tabpanel">
             <h5 class="my-2 h5">Panel 1</h5>
           </div>
           <!-- Panel 1 -->
