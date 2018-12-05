@@ -34,7 +34,7 @@
             <div class="container ">
             	<div class="row">
             		<div class="col mt-4">
-            			<h4 class="font-weight-bold red-text"><i class="fa fa-home mx-2"></i>Homepage Content</h4>
+            			<h4 class="font-weight-bold text-center red-text"><i class="fa fa-home mx-2"></i>Homepage Content</h4>
             		</div>
             	</div>
             	<hr>
@@ -51,7 +51,7 @@
 								        <label for="title">Carousel Title</label>
 								    </div>
 								    <div class="md-form">
-								        <input type="text" id="description" length="100" name="codescription" class="form-control">
+								        <input type="text" id="description" length="250" name="codescription" class="form-control">
 								        <label for="description">Carousel Description</label>
 								    </div>
 								    <div class="file-field">
