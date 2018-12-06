@@ -4,8 +4,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Admin extends CI_Controller {
 	public function index()
 	{
+		if(!isset($_SESSION['admin'])){
 		$data['active'] = 'login';
 		$this->load->view('Admin/admin_login',$data);
+		}
+		else
+			redirect('Admin/homepage');
 	}
 	public function login()
 	{
