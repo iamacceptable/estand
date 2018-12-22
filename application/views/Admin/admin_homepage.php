@@ -3,8 +3,8 @@
 <div class="tab-content my-4">
   <div class="tab-pane fade in show active" id="left_panel" role="tabpanel">
     <div class="row">
-      <div class="col-md-3 col-lg-3 col-sm-3 sticky" style="padding: 0; ">
-        <ul class="nav md-pills pills-danger flex-column" role="tablist">
+      <div class="col-md-3 col-lg-3 col-sm-3 sticky " style="padding: 0; ">
+        <ul class="nav md-pills pills-warning flex-column" role="tablist">
           <li class="nav-item">
             <a class="nav-link active" data-toggle="tab" href="#homepage" role="tab">
               <i class="fa fa-home mr-2"></i>Homepage
