@@ -3,7 +3,7 @@
 <div class="tab-content my-4">
   <div class="tab-pane fade in show active" id="left_panel" role="tabpanel">
     <div class="row">
-      <div class="col-md-3 col-lg-3 col-sm-3 sticky " style="padding: 0; ">
+      <div class="col-md-3 col-lg-3 col-sm-3" style="padding: 0; ">
         <ul class="nav md-pills pills-warning flex-column" role="tablist">
           <li class="nav-item">
             <a class="nav-link active" data-toggle="tab" href="#homepage" role="tab">
@@ -43,20 +43,20 @@
 								<h6 class="card-subtitle mb-2 text-muted text-center">Add new Image to Carousel</h6>
 								<form action="#" method="POST" class="md-form">
 									<div class="md-form">
-								        <input type="text" id="title" name="cotitle" class="form-control">
-								        <label for="title">Carousel Title</label>
+								        <input type="text" id="ctitle" name="ctitle" class="form-control">
+								        <label for="ctitle">Carousel Title</label>
 								    </div>
 								    <div class="md-form">
-								        <input type="text" id="description" length="250" name="codescription" class="form-control">
-								        <label for="description">Carousel Description</label>
+								        <input type="text" id="cdescription" length="250" name="cdescription" class="form-control">
+								        <label for="cdescription">Carousel Description</label>
 								    </div>
 								    <div class="file-field">
 								        <div class="btn btn-danger btn-sm float-left">
 								            <span>Choose file</span>
-								            <input type="file">
+								            <input type="file" name="cauroselgolu">
 								        </div>
 								        <div class="file-path-wrapper">
-								            <input class="file-path" readonly type="text" placeholder="Upload your file">
+								            <input class="file-path" name="cimg" readonly type="text" placeholder="Upload your file">
 								        </div>
 								    </div>
 								    <div class="text-center md-form">

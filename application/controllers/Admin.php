@@ -52,4 +52,16 @@ class Admin extends CI_Controller {
 		$this->session->unset_userdata('admin');
 		$this->index();
 	}
+	public function cupload(){
+		$this->load->library('upload');
+		$this->form_validation->set_rules('ctitle', 'Title', 'required');
+		$this->form_validation->set_rules('cdescription', 'Description','required');
+		$this->form_validation->set_rules('cimg', 'Image','required',array('required' => 'Please Choose appropriate Image for Caurosel'));
+		if($this->form_validation->run() == FALSE){
+			$this->index();
+		}
+		else{
+			$imddata = array();
+		}
+	}
 }
