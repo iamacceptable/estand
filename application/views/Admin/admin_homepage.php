@@ -43,12 +43,12 @@
 								<h6 class="card-subtitle mb-2 text-muted text-center">Add new Image to Carousel</h6>
 								<form action="<?php echo base_url();?>index.php/Admin/cupload" method="POST" class="md-form" enctype="multipart/form-data">
 									<div class="md-form">
-								        <input type="text" id="ctitle" name="ctitle" class="form-control">
+								        <input type="text" id="ctitle" name="ctitle" value="<?php echo set_value('ctitle');?>" class="form-control">
 								        <label for="ctitle">Carousel Title</label>
                         <small class="error text-muted"><?php echo form_error('ctitle');?></small>
 								    </div>
 								    <div class="md-form">
-								        <input type="text" id="cdescription" length="250" name="cdescription" class="form-control">
+								        <input type="text" id="cdescription" length="250" name="cdescription" value="<?php echo set_value('cdescription');?>" class="form-control">
 								        <label for="cdescription">Carousel Description</label>
                         <small class="error text-muted"><?php echo form_error('cdescription');?></small>
 								    </div>

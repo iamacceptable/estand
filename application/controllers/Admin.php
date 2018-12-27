@@ -56,9 +56,8 @@ class Admin extends CI_Controller {
 		$this->load->library('upload');
 		$this->form_validation->set_rules('ctitle', 'Title', 'required');
 		$this->form_validation->set_rules('cdescription', 'Description','required');
-		$this->form_validation->set_rules('cimg', 'Image','required',array('required' => 'Please Choose appropriate Image for Caurosel'));
 		if($this->form_validation->run() == FALSE){
-			$this->index();
+			$this->homepage();
 		}
 		else{
 			$config['upload_path'] = './assets/uploads/caurosel';
@@ -68,7 +67,9 @@ class Admin extends CI_Controller {
 		    $config['max_height'] = '40000';
 		    $this->upload->initialize($config);
 			if(! $this->upload->do_upload('cauroselgolu')){
-				print_r('error');				
+				$this->homepage();
+				echo '<script language="javascript">alert("Please Choose a valid image to upload!!")</script>';												
+				
 			}
 			else{
 				$ud = $this->upload->data();
