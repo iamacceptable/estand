@@ -23,4 +23,12 @@ class AdminM extends CI_model {
 		else
 			return FALSE;
 	}
+	public function testuploadm($data){
+		$this->load->database();
+		$this->db->insert('tbl_testimonials',$data);
+		if($this->db->insert_id())
+			return TRUE;
+		else
+			return FALSE;
+	}
 }

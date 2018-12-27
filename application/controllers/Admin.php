@@ -82,10 +82,51 @@ class Admin extends CI_Controller {
 				if($this->AdminM->cuploadm($post))
 				{
 					echo '<script language="javascript">alert("Caurosel Image Successfully Uploaded")</script>';
-					$this->index();
+					$this->homepage();
 				}
 				else{
-					echo '<script language="javascript">alert("Caurosel Image Not Properly Uploaded to Database..Please Try Again!!!")</script>';					
+					echo '<script language="javascript">alert("Caurosel Image Not Properly Uploaded to Database..Please Try Again!!!")</script>';
+					$this->homepage();					
+				}
+			}
+		}
+	}
+	public function testupload(){
+		$this->load->library('upload');
+		$this->form_validation->set_rules('tname', 'Name', 'required');
+		$this->form_validation->set_rules('tdesignation','Designation', 'required');
+		$this->form_validation->set_rules('tmessage', 'Message', 'required');
+		if($this->form_validation->run() == FALSE){
+			$this->homepage();
+		}
+		else{
+			$config['upload_path'] = './assets/uploads/testimonials';
+			$config['allowed_types'] = 'gif|jpg|png|jpeg';
+			$config['max_size'] = '6144000';
+		    $config['max_width'] = '40000';
+			$config['max_height'] = '40000';
+			$this->upload->initialize($config);
+			if(! $this->upload->do_upload('testgolu')){
+				$this->homepage();
+				echo '<script language="javascript">alert("Please Choose a valid image to upload!!")</script>';
+			}
+			else{
+				$td = $this->upload->data();
+				$post = array(
+					'tname' => $this->input->post('tname'),
+					'tdesignation' => $this->input->post('tdesignation'),
+					'tmessage' => $this->input->post('tmessage'),
+					'timg' => $this->input->post('timg'),
+					'tpath' => base_url('assets/uploads/testimonials/'.$td['raw_name'].$td['file_ext'])
+				);
+				$this->load->model('AdminM');
+				if($this->AdminM->testuploadm($post)){
+					echo '<script language="javascript">alert("Testimonial Successfully Uploaded")</script>';
+					$this->homepage();
+				}
+				else{
+					echo '<script language="javascript">alert("Testimonial Couldn\'t ")</script>';
+					$this->homepage();
 				}
 			}
 		}
