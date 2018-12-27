@@ -41,14 +41,16 @@
 							<div class="card-body">
 								<h5 class="card-title text-center">Homepage Carousel</h5>
 								<h6 class="card-subtitle mb-2 text-muted text-center">Add new Image to Carousel</h6>
-								<form action="#" method="POST" class="md-form">
+								<form action="<?php echo base_url();?>index.php/Admin/cupload" method="POST" class="md-form" enctype="multipart/form-data">
 									<div class="md-form">
 								        <input type="text" id="ctitle" name="ctitle" class="form-control">
 								        <label for="ctitle">Carousel Title</label>
+                        <small class="error text-muted"><?php echo form_error('ctitle');?></small>
 								    </div>
 								    <div class="md-form">
 								        <input type="text" id="cdescription" length="250" name="cdescription" class="form-control">
 								        <label for="cdescription">Carousel Description</label>
+                        <small class="error text-muted"><?php echo form_error('cdescription');?></small>
 								    </div>
 								    <div class="file-field">
 								        <div class="btn btn-danger btn-sm float-left">
@@ -58,9 +60,11 @@
 								        <div class="file-path-wrapper">
 								            <input class="file-path" name="cimg" readonly type="text" placeholder="Upload your file">
 								        </div>
+                        <small class="text-muted">Only Upload a specific image of height 251px</small>
+
 								    </div>
 								    <div class="text-center md-form">
-								    	<button class="btn btn-success btn-sm">Add New<i class="fa fa-plus ml-2"></i></button>
+								    	<button class="btn btn-success btn-rounded">Add New<i class="fa fa-plus ml-2"></i></button>
 									</div>	
 								</form>
 							</div>

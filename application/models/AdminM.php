@@ -15,4 +15,12 @@ class AdminM extends CI_model {
 		else
 			return FALSE;
 	}
+	public function cuploadm($data){
+		$this->load->database();
+		$this->db->insert('tbl_caurosel',$data);
+		if($this->db->insert_id())
+			return TRUE;
+		else
+			return FALSE;
+	}
 }

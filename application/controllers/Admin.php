@@ -61,7 +61,32 @@ class Admin extends CI_Controller {
 			$this->index();
 		}
 		else{
-			$imddata = array();
+			$config['upload_path'] = './assets/uploads/caurosel';
+			$config['allowed_types'] = 'gif|jpg|png|jpeg';
+			$config['max_size'] = '6144000';
+		    $config['max_width'] = '40000';
+		    $config['max_height'] = '40000';
+		    $this->upload->initialize($config);
+			if(! $this->upload->do_upload('cauroselgolu')){
+				print_r('error');				
+			}
+			else{
+				$ud = $this->upload->data();
+				$post = array('ctitle' => $this->input->post('ctitle'),
+					'cdescription' => $this->input->post('cdescription'),
+					'cname' => $this->input->post('cimg'),
+					'cpath' => base_url('assets/uploads/caurosel/'.$ud['raw_name'].$ud['file_ext']) 
+				);
+				$this->load->model('AdminM');
+				if($this->AdminM->cuploadm($post))
+				{
+					echo '<script language="javascript">alert("Caurosel Image Successfully Uploaded")</script>';
+					$this->index();
+				}
+				else{
+					echo '<script language="javascript">alert("Caurosel Image Not Properly Uploaded to Database..Please Try Again!!!")</script>';					
+				}
+			}
 		}
 	}
 }
