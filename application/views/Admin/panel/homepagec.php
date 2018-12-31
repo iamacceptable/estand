@@ -3,6 +3,8 @@
             	<div class="row">
             		<div class="col mt-4">
             			<h4 class="font-weight-bold text-center red-text"><i class="fa fa-home mx-2"></i>Homepage Content</h4>
+						<h6 class="mt-2 text-muted text-center red-text"><?php if(isset($error)) { echo $error.' <a href="'; echo base_url().'index.php/Admin"><i class="fa fa-refresh"></i> Reload the Page</a>'; } ?></h6>
+						<h6 class="mt-2 text-muted text-center green-text"><?php if(isset($success)) { echo $success.' <a href="'; echo base_url().'index.php/Admin"><i class="fa fa-refresh"></i> Reload the Page</a>'; } ?></h6>
             		</div>
             	</div>
             	<hr>
@@ -32,9 +34,11 @@
 								        <div class="file-path-wrapper">
 								            <input class="file-path" name="cimg" readonly type="text" placeholder="Upload your file">
 								        </div>
-                        <small class="text-muted">Only Upload a specific image of height 251px</small>
 
-								    </div>
+									</div>
+									<div class="text-center md-form">
+										<small class="text-muted">*Only Upload a specific image of Height 516px</small>									
+									</div>
 								    <div class="text-center md-form">
 								    	<button class="btn btn-success btn-rounded">Add New<i class="fa fa-plus ml-2"></i></button>
 									</div>	
@@ -47,9 +51,54 @@
             	<hr>
             	<div class="row">
             		<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
-            			<h4 class="font-weight-bold indigo-text text-center">Current Slide Show Images</h4>
+						<h4 class="font-weight-bold indigo-text text-center">Current Slide Show Images</h4>
+						<div class="table-responsive">
+							<!--Table-->
+							<table class="table table-striped table-hoverable">
+
+							<!--Table head-->
+							<thead>
+								<tr>
+								<th>S.No.</th>
+								<th>Title</th>
+								<th>Description</th>
+								<th>Image Name</th>
+								<th>Image</th>
+								<th>Edit</th>
+								<th>Delete</th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php $i=1; 
+									foreach($caurosel as $cdata): ?>
+									<tr>
+									<th scope="row"><?= $i++; ?></th>
+									<td><?= $cdata['ctitle']; ?></td>
+									<td><?= $cdata['cdescription']; ?></td>
+									<td><?= $cdata['cname']; ?></td>
+									<td><img src="<?= $cdata['cpath'];?>" height="15%"></td>
+									<td><a href="#"><i class="fa fa-edit indigo-text"></i></a></td>
+									<td><a href="<?= base_url();?>index.php/Admin/cdelete/<?= $cdata['cid'];?>"><i class="fa fa-trash red-text"></i></a></td>
+									</tr>
+								<?php endforeach;
+								 if($i == 1){ ?>
+								 <tr>
+									 <td align="center" colspan="7">
+										 No Caurosel Uploaded Yet!!
+									 </td>
+								 </tr>
+								 <?php } ?>
+							</tbody>
+							<!--Table body-->
+
+
+							</table>
+							<!--Table-->
+						</div>
+					</section>
+					<!--Section: Live preview-->
             		</div>
             		
             	</div>
             </div>
-          </div>
+		  </div>

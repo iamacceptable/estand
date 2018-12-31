@@ -31,4 +31,28 @@ class AdminM extends CI_model {
 		else
 			return FALSE;
 	}
+	public function fetch_mcaurosel(){
+		$this->load->database();
+		$this->db->select('*');
+		$this->db->from('tbl_caurosel');
+		$res = $this->db->get();
+		return $res->result_array();
+	}
+	public function fetchgolucm($id){
+		$this->load->database();
+		$this->db->select('cname');
+		$this->db->from('tbl_caurosel');
+		$this->db->where('cid',$id);
+		$res = $this->db->get();
+		if($res->num_rows() == 1){
+		return $res->result_array()[0]['cname'];
+		}
+		else
+		return FALSE;
+	}
+	public function cdeletem($id){
+		$this->load->database();
+		$this->db->where('cid',$id);
+		$this->db->delete('tbl_caurosel');
+	}
 }

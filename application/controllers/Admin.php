@@ -2,6 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
+	var $data = ['error','success'];
 	public function index()
 	{
 		if(!isset($_SESSION['admin'])){
@@ -42,7 +43,13 @@ class Admin extends CI_Controller {
 	public function homepage()
 	{	
 		if(isset($_SESSION['admin']) && $_SESSION['admin'] == 'adminlogin'){
+			$this->load->model('AdminM');
+			if(isset($this->data['error'])){
+			$data['error'] = $this->data['error'];}
+			if(isset($this->data['success'])){
+			$data['success'] = $this->data['success']; }
 			$data['active'] = 'homepage';
+			$data['caurosel'] = $this->AdminM->fetch_mcaurosel();
 			$this->load->view('Admin/admin_homepage',$data);
 		}
 		else
@@ -67,25 +74,24 @@ class Admin extends CI_Controller {
 		    $config['max_height'] = '40000';
 		    $this->upload->initialize($config);
 			if(! $this->upload->do_upload('cauroselgolu')){
-				$this->homepage();
-				echo '<script language="javascript">alert("Please Choose a valid image to upload!!")</script>';												
-				
+					$this->data['error'] = "Please Choose a Valid Image!!";
+					$this->homepage();
 			}
 			else{
 				$ud = $this->upload->data();
 				$post = array('ctitle' => $this->input->post('ctitle'),
 					'cdescription' => $this->input->post('cdescription'),
-					'cname' => $this->input->post('cimg'),
+					'cname' => $ud['raw_name'].$ud['file_ext'],
 					'cpath' => base_url('assets/uploads/caurosel/'.$ud['raw_name'].$ud['file_ext']) 
 				);
 				$this->load->model('AdminM');
 				if($this->AdminM->cuploadm($post))
 				{
-					echo '<script language="javascript">alert("Caurosel Image Successfully Uploaded")</script>';
+					$this->data['success'] = "Caurosel Uploaded Successfully";
 					$this->homepage();
 				}
 				else{
-					echo '<script language="javascript">alert("Caurosel Image Not Properly Uploaded to Database..Please Try Again!!!")</script>';
+					$this->data['error'] = "Caurosel Upload Unsuccessfull";					
 					$this->homepage();					
 				}
 			}
@@ -107,8 +113,8 @@ class Admin extends CI_Controller {
 			$config['max_height'] = '40000';
 			$this->upload->initialize($config);
 			if(! $this->upload->do_upload('testgolu')){
-				$this->homepage();
-				echo '<script language="javascript">alert("Please Choose a valid image to upload!!")</script>';
+					$this->data['error'] = "Please Choose a Valid Image!!";
+					$this->homepage();
 			}
 			else{
 				$td = $this->upload->data();
@@ -116,19 +122,32 @@ class Admin extends CI_Controller {
 					'tname' => $this->input->post('tname'),
 					'tdesignation' => $this->input->post('tdesignation'),
 					'tmessage' => $this->input->post('tmessage'),
-					'timg' => $this->input->post('timg'),
+					'timg' => $td['raw_name'].$td['file_ext'],
 					'tpath' => base_url('assets/uploads/testimonials/'.$td['raw_name'].$td['file_ext'])
 				);
 				$this->load->model('AdminM');
 				if($this->AdminM->testuploadm($post)){
-					echo '<script language="javascript">alert("Testimonial Successfully Uploaded")</script>';
+					$this->data['success'] = "Testimonial Uploaded Successfully";
 					$this->homepage();
 				}
 				else{
-					echo '<script language="javascript">alert("Testimonial Couldn\'t ")</script>';
+					$this->data['error'] = "Testimonial Upload Unsuccessfull!!!";
 					$this->homepage();
 				}
 			}
+		}
+	}
+	public function cdelete($id){
+		$this->load->model('AdminM');
+		if($fn = $this->AdminM->fetchgolucm($id)){
+			unlink('assets/uploads/caurosel/'.$fn);
+			$this->AdminM->cdeletem($id);
+			$this->data['success'] = "Caurosel Deleted Successfully";
+			$this->homepage();
+		}
+		else{
+			$this->data['error'] = "Deletion Unsucessfull";
+			$this->homepage();
 		}
 	}
 }
