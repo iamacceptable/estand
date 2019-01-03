@@ -1,4 +1,4 @@
-<div class="tab-pane fade in show active my-2" id="homepage" role="tabpanel">
+<div class="tab-pane fade my-2" id="homepage" role="tabpanel">
             <div class="container ">
             	<div class="row">
             		<div class="col mt-4">
@@ -13,8 +13,8 @@
             		<div class="col-md-8 col-sm-8 col-xs-8 col-lg-8">
             			<div class="card">
 							<div class="card-body">
-								<h5 class="card-title text-center">Homepage Carousel</h5>
-								<h6 class="card-subtitle mb-2 text-muted text-center">Add new Image to Carousel</h6>
+								<h5 class="card-title text-center">Homepage Caurosel</h5>
+								<h6 class="card-subtitle mb-2 text-muted text-center">Add new Image to Caurosel</h6>
 								<form action="<?php echo base_url();?>index.php/Admin/cupload" method="POST" class="md-form" enctype="multipart/form-data">
 									<div class="md-form">
 								        <input type="text" id="ctitle" name="ctitle" value="<?php echo set_value('ctitle');?>" class="form-control">
@@ -48,57 +48,6 @@
             		</div>
             		<div class="col-md-2 col-sm-0 col-xs-0 col-lg-2"></div>
             	</div>
-            	<hr>
-            	<div class="row">
-            		<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
-						<h4 class="font-weight-bold indigo-text text-center">Current Slide Show Images</h4>
-						<div class="table-responsive">
-							<!--Table-->
-							<table class="table table-striped table-hoverable">
-
-							<!--Table head-->
-							<thead>
-								<tr>
-								<th>S.No.</th>
-								<th>Title</th>
-								<th>Description</th>
-								<th>Image Name</th>
-								<th>Image</th>
-								<th>Edit</th>
-								<th>Delete</th>
-								</tr>
-							</thead>
-							<tbody>
-								<?php $i=1; 
-									foreach($caurosel as $cdata): ?>
-									<tr>
-									<th scope="row"><?= $i++; ?></th>
-									<td><?= $cdata['ctitle']; ?></td>
-									<td><?= $cdata['cdescription']; ?></td>
-									<td><?= $cdata['cname']; ?></td>
-									<td><img src="<?= $cdata['cpath'];?>" height="15%"></td>
-									<td><a href="#"><i class="fa fa-edit indigo-text"></i></a></td>
-									<td><a href="<?= base_url();?>index.php/Admin/cdelete/<?= $cdata['cid'];?>"><i class="fa fa-trash red-text"></i></a></td>
-									</tr>
-								<?php endforeach;
-								 if($i == 1){ ?>
-								 <tr>
-									 <td align="center" colspan="7">
-										 No Caurosel Uploaded Yet!!
-									 </td>
-								 </tr>
-								 <?php } ?>
-							</tbody>
-							<!--Table body-->
-
-
-							</table>
-							<!--Table-->
-						</div>
-					</section>
-					<!--Section: Live preview-->
-            		</div>
-            		
-            	</div>
+            	
             </div>
 		  </div>

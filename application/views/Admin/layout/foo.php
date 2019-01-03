@@ -2,4 +2,3 @@
   eStand.in © 2018 | Developed with<i class="fa fa-heart red-text mx-2"></i>by: <a class="white-text mx-2" href="https://www.fb.com/iamacceptable">Shubham Kumar</a>
 </nav>
 <script type="text/javascript" src="<?php echo base_url();?>assets/js/compiled.min.js"></script>
-

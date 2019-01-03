@@ -46,10 +46,12 @@ class Admin extends CI_Controller {
 			$this->load->model('AdminM');
 			if(isset($this->data['error'])){
 			$data['error'] = $this->data['error'];}
-			if(isset($this->data['success'])){
+			if(isset($this->data['success'])){	
 			$data['success'] = $this->data['success']; }
 			$data['active'] = 'homepage';
 			$data['caurosel'] = $this->AdminM->fetch_mcaurosel();
+			$data['testimonials'] = $this->AdminM->fetch_mtestimonioals();
+			$data['users'] = $this->AdminM->fetch_musers();
 			$this->load->view('Admin/admin_homepage',$data);
 		}
 		else

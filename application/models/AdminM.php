@@ -55,4 +55,18 @@ class AdminM extends CI_model {
 		$this->db->where('cid',$id);
 		$this->db->delete('tbl_caurosel');
 	}
+	public function fetch_musers(){
+		$this->load->database();
+		$this->db->select('*');
+		$this->db->from('tbl_users');
+		$res = $this->db->get();
+		return $res->result_array();
+	}
+	public function fetch_mtestimonioals(){
+		$this->load->database();
+		$this->db->select('*');
+		$this->db->from('tbl_testimonials');
+		$res = $this->db->get();
+		return $res->result_array();
+	}
 }

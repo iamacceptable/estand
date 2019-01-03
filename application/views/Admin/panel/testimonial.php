@@ -44,12 +44,5 @@
         </div>
         <div class="col-md-2 col-sm-0 col-xs-0 col-lg-2"></div>
     </div>
-    <hr>
-    <div class="row">
-    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
-    <h4 class="font-weight-bold indigo-text text-center"><i class="fa fa-user-o mx-2"></i>Current Testimonials</h4>
-    </div>
-
-    </div>
     </div>
 </div>
